@@ -92,6 +92,7 @@ LIBS:Xicor
 LIBS:xilinx
 LIBS:zetex
 LIBS:Zilog
+LIBS:looper-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -109,73 +110,163 @@ $EndDescr
 $Comp
 L STM32F401RC U?
 U 1 1 58D0F889
-P 3150 2800
-F 0 "U?" H 2800 3850 60  0000 C CNN
-F 1 "STM32F401RC" H 3150 1750 60  0000 C CNN
-F 2 "" H 3100 2750 60  0001 C CNN
-F 3 "" H 3100 2750 60  0001 C CNN
-	1    3150 2800
+P 2550 1600
+F 0 "U?" H 2200 2650 60  0000 C CNN
+F 1 "STM32F401RC" H 2550 550 60  0000 C CNN
+F 2 "" H 2500 1550 60  0001 C CNN
+F 3 "" H 2500 1550 60  0001 C CNN
+	1    2550 1600
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X04 J?
 U 1 1 58D0F94B
-P 4900 2250
-F 0 "J?" H 4900 2500 50  0000 C CNN
-F 1 "CONN_01X04" V 5000 2250 50  0000 C CNN
-F 2 "" H 4900 2250 50  0001 C CNN
-F 3 "" H 4900 2250 50  0001 C CNN
-	1    4900 2250
+P 4300 1050
+F 0 "J?" H 4300 1300 50  0000 C CNN
+F 1 "CONN_01X04" V 4400 1050 50  0000 C CNN
+F 2 "" H 4300 1050 50  0001 C CNN
+F 3 "" H 4300 1050 50  0001 C CNN
+	1    4300 1050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 2100 4450 2100
+	4100 900  3850 900 
 Wire Wire Line
-	4450 2100 4450 2050
-Text GLabel 1200 1100 0    60   Input ~ 0
+	3850 900  3850 850 
+Text GLabel 1100 950  0    60   Input ~ 0
 3.3V
 Wire Wire Line
-	1200 1100 1350 1100
-Text Label 1350 1100 0    60   ~ 0
+	1100 950  1250 950 
+Text Label 1250 950  0    60   ~ 0
 3.3V
-Text Label 4450 2050 0    60   ~ 0
+Text Label 3850 850  0    60   ~ 0
 3.3V
 Wire Wire Line
-	4700 2200 4100 2200
+	4100 1000 3500 1000
 Wire Wire Line
-	4100 2200 4100 2150
+	3500 1000 3500 950 
 Wire Wire Line
-	4100 2150 3900 2150
+	3500 950  3300 950 
 Wire Wire Line
-	4700 2300 4450 2300
+	4100 1100 3850 1100
 Wire Wire Line
-	4450 2300 4450 2450
+	3850 1100 3850 1250
 $Comp
 L GND #PWR?
 U 1 1 58D0FA65
-P 4450 2450
-F 0 "#PWR?" H 4450 2200 50  0001 C CNN
-F 1 "GND" H 4450 2300 50  0000 C CNN
-F 2 "" H 4450 2450 50  0001 C CNN
-F 3 "" H 4450 2450 50  0001 C CNN
-	1    4450 2450
+P 3850 1250
+F 0 "#PWR?" H 3850 1000 50  0001 C CNN
+F 1 "GND" H 3850 1100 50  0000 C CNN
+F 2 "" H 3850 1250 50  0001 C CNN
+F 3 "" H 3850 1250 50  0001 C CNN
+	1    3850 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 2400 3900 2400
+	4100 1200 3300 1200
 $Comp
 L WM8778-units U?
 U 2 1 58D101B0
-P 8800 3250
-F 0 "U?" H 8500 4150 60  0000 C CNN
-F 1 "WM8778-units" H 8750 3700 60  0000 C CNN
-F 2 "" H 8550 3250 60  0000 C CNN
-F 3 "" H 8550 3250 60  0000 C CNN
-	2    8800 3250
+P 8700 2350
+F 0 "U?" H 8400 3250 60  0000 C CNN
+F 1 "WM8778-units" H 8650 2800 60  0000 C CNN
+F 2 "" H 8450 2350 60  0000 C CNN
+F 3 "" H 8450 2350 60  0000 C CNN
+	2    8700 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7750 2450 7900 2450
-Text Label 7750 2450 0    60   ~ 0
+	7650 1550 7800 1550
+Text Label 7650 1550 0    60   ~ 0
 3.3V
+$Comp
+L STM32F401RC U?
+U 3 1 58FD347E
+P 2550 5800
+F 0 "U?" H 2200 6850 60  0000 C CNN
+F 1 "STM32F401RC" H 2550 4750 60  0000 C CNN
+F 2 "" H 2500 5750 60  0001 C CNN
+F 3 "" H 2500 5750 60  0001 C CNN
+	3    2550 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 6450 3300 6450
+Wire Wire Line
+	6200 2150 6200 2700
+Wire Wire Line
+	6200 2700 6200 6450
+Wire Wire Line
+	6200 2150 7800 2150
+Wire Wire Line
+	7800 2700 6200 2700
+Connection ~ 6200 2700
+Text Notes 3650 6550 0    60   ~ 0
+stopping will power down adc/dac, restarting powers them up again\nvolume needs to be updated for correct settings again!
+Text Label 3350 6450 0    60   ~ 0
+MCLK
+Wire Wire Line
+	1800 1750 1600 1750
+Text Label 1600 1750 2    60   ~ 0
+I2S3_WS
+$Comp
+L STM32F401RC U?
+U 2 1 58FD4D8F
+P 2550 3700
+F 0 "U?" H 2200 4750 60  0000 C CNN
+F 1 "STM32F401RC" H 2550 2650 60  0000 C CNN
+F 2 "" H 2500 3650 60  0001 C CNN
+F 3 "" H 2500 3650 60  0001 C CNN
+	2    2550 3700
+	1    0    0    -1  
+$EndComp
+Text Label 3300 2800 0    60   ~ 0
+SDIO_CMD
+Wire Wire Line
+	1800 3300 1450 3300
+$Comp
+L SW_SPDT SW?
+U 1 1 58FD6197
+P 1250 3300
+F 0 "SW?" H 1250 3470 50  0000 C CNN
+F 1 "SW_SPDT" H 1250 3100 50  0000 C CNN
+F 2 "" H 1250 3300 50  0001 C CNN
+F 3 "" H 1250 3300 50  0001 C CNN
+	1    1250 3300
+	-1   0    0    1   
+$EndComp
+Text Label 1050 3200 2    60   ~ 0
+3.3V
+Text Label 1050 3400 2    60   ~ 0
+GND
+Text Label 1800 3550 2    60   ~ 0
+I2S3_CK
+Text Label 1800 4100 2    60   ~ 0
+I2S3_SD
+Text Label 3300 3850 0    60   ~ 0
+I2S2_WS
+Text Label 3300 3550 0    60   ~ 0
+I2S2_CK
+Text Label 3300 3050 0    60   ~ 0
+I2S2_SD
+Text Label 7800 2250 2    60   ~ 0
+I2S3_CK
+Text Label 7800 2350 2    60   ~ 0
+I2S3_WS
+Text Label 7800 2450 2    60   ~ 0
+I2S3_SD
+Text Label 7800 2800 2    60   ~ 0
+I2S2_CK
+Text Label 7800 2900 2    60   ~ 0
+I2S2_WS
+Text Label 7800 3000 2    60   ~ 0
+I2S2_SD
+Text Notes 7750 1600 2    60   ~ 0
+temporary left midrail.\n-> hardware control
+Text Notes 7800 1700 2    60   ~ 0
+temporary HIGH -> I2S mode
+Text Notes 7800 1800 2    60   ~ 0
+temporary LOW -> 16bit
+Text Notes 7800 1900 2    60   ~ 0
+temporary LOW -> no de-emphasis
 $EndSCHEMATC
