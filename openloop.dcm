@@ -1,0 +1,11 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP3211
+F ../datasheets/switching_regulator_AP3211.pdf
+$ENDCMP
+#
+$CMP WM8778
+F ../datasheets/CODEC - WM8778_Rev4.2.pdf
+$ENDCMP
+#
+#End Doc Library
