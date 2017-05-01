@@ -1,40 +1,102 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:openloop
-LIBS:looper-cache
+LIBS:74xgxx
+LIBS:74xx
+LIBS:ac-dc
+LIBS:actel
+LIBS:adc-dac
+LIBS:allegro
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:battery_management
+LIBS:bbd
+LIBS:bosch
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:cmos4000
+LIBS:conn
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:diode
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:intel
+LIBS:interface
+LIBS:intersil
+LIBS:ir
+LIBS:Lattice
+LIBS:leds
+LIBS:linear
+LIBS:logo
+LIBS:maxim
+LIBS:mechanical
+LIBS:memory
+LIBS:microchip
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic24mcu
+LIBS:microchip_pic32mcu
+LIBS:microcontrollers
+LIBS:modules
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:motors
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:power
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:triac_thyristor
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:wiznet
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:xilinx
+LIBS:zetex
+LIBS:Zilog
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -45,19 +107,21 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 2600 2950 1050 850 
-U 58B347F0
-F0 "Codec" 60
-F1 "codec.sch" 60
-F2 "3.3V" I L 2600 3050 60 
-F3 "DGND" I L 2600 3200 60 
-F4 "5V" I L 2600 3350 60 
-F5 "AGND" I L 2600 3500 60 
-$EndSheet
-$Sheet
 S 2150 1850 1350 750 
 U 58B3513F
 F0 "power schematic" 60
 F1 "power.sch" 60
+$EndSheet
+$Sheet
+S 6700 2200 1000 1300
+U 58D0F874
+F0 "controller" 60
+F1 "controller.sch" 60
+$EndSheet
+$Sheet
+S 2600 2950 1050 850 
+U 58B347F0
+F0 "Codec" 60
+F1 "codec.sch" 60
 $EndSheet
 $EndSCHEMATC
