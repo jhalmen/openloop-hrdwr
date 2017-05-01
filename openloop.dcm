@@ -21,6 +21,24 @@ $CMP JMP
 D Copper block for ground connection
 $ENDCMP
 #
+$CMP STM32F401RC
+D ST Microelectronics ARM Microcontroller
+K uC
+F ../datasheets/STM32F401xC.pdf
+$ENDCMP
+#
+$CMP STM32F401RC-cramped
+D ST Microelectronics ARM Microcontroller
+K uC
+F ../datasheets/STM32F401xC.pdf
+$ENDCMP
+#
+$CMP STM32F401RC-ports
+D ST Microelectronics ARM Microcontroller
+K uC
+F ../datasheets/STM32F401xC.pdf
+$ENDCMP
+#
 $CMP TC1185
 D 5V Low Dropout Regulator
 K LDO
