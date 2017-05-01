@@ -1,10 +1,41 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AGND
+D Analog Ground
+K POWER, PWR
+$ENDCMP
+#
 $CMP AP3211
+D 1.4MHz, 1.5A Asynchronous DC-DC Buck Converter
+K switching regulator
 F ../datasheets/switching_regulator_AP3211.pdf
 $ENDCMP
 #
+$CMP AZ1117C
+D 3.3V Low Dropout Regulator
+K LDO
+F ../datasheets/LDO_3.3V.pdf
+$ENDCMP
+#
+$CMP JMP
+D Copper block for ground connection
+$ENDCMP
+#
+$CMP TC1185
+D 5V Low Dropout Regulator
+K LDO
+F ../datasheets/LDO_5V.pdf
+$ENDCMP
+#
 $CMP WM8778
+D 24-bit, 192kHz Stereo CODEC
+K CODEC
+F ../datasheets/CODEC - WM8778_Rev4.2.pdf
+$ENDCMP
+#
+$CMP WM8778-units
+D 24-bit, 192kHz Stereo CODEC
+K CODEC
 F ../datasheets/CODEC - WM8778_Rev4.2.pdf
 $ENDCMP
 #
