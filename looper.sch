@@ -28,13 +28,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:library
+LIBS:openloop
 LIBS:looper-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -44,88 +44,20 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L WM8778 U?
-U 1 1 5874EDFD
-P 38850 2150
-F 0 "U?" H 38600 3600 60  0000 C CNN
-F 1 "WM8778" H 38800 3100 60  0000 C CNN
-F 2 "" H 38600 2650 60  0000 C CNN
-F 3 "" H 38600 2650 60  0000 C CNN
-	1    38850 2150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	37450 850  37950 850 
-Text Label 37450 850  0    60   ~ 0
-D_3.3V
-Wire Wire Line
-	37950 1050 37450 1050
-Text Label 37450 1050 0    60   ~ 0
-DGND
-Text Label 39750 850  0    60   ~ 0
-A_5V
-Text Label 39750 1050 0    60   ~ 0
-AGND
-Wire Wire Line
-	37950 3150 37450 3150
-Text Label 37450 3150 0    60   ~ 0
-PREAMP_OUT
-Wire Wire Line
-	37450 3450 37950 3450
-Text Label 37450 3450 0    60   ~ 0
-INST_OUT
-Wire Wire Line
-	37950 1350 37450 1350
-Text Label 37450 1350 0    60   ~ 0
-D_3.3V
-Text Notes 36700 1350 0    60   ~ 0
-LOW: 2 pin mode\nHIGH: I2S mode
-$Comp
-L WM8778 U?
-U 1 1 587609C5
-P 3200 3050
-F 0 "U?" H 2950 4500 60  0000 C CNN
-F 1 "WM8778" H 3150 4000 60  0000 C CNN
-F 2 "" H 2950 3550 60  0000 C CNN
-F 3 "" H 2950 3550 60  0000 C CNN
-	1    3200 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2300 1750 2000 1750
-Text Label 2000 1750 0    60   ~ 0
-D_3.3V
-Wire Wire Line
-	2300 1950 2000 1950
-Text Label 2000 1950 0    60   ~ 0
-DGND
-Wire Wire Line
-	2300 2250 2000 2250
-Text Label 2000 2250 0    60   ~ 0
-D_3.3V
-Text Notes 1050 2350 0    60   ~ 0
-HIGH: I2S Mode\nLOW: 2pin Mode\nFLOAT: Hardware Mode
-Wire Wire Line
-	2300 2400 2050 2400
-Text Label 2050 2400 0    60   ~ 0
-CE
-Wire Wire Line
-	2300 2500 2050 2500
-Text Label 2050 2500 0    60   ~ 0
-DI
-Wire Wire Line
-	2300 2600 2050 2600
-Text Label 2050 2600 0    60   ~ 0
-CL
-Wire Wire Line
-	4100 1750 4350 1750
-Text Label 4350 1750 2    60   ~ 0
-A_5V
-Wire Wire Line
-	4100 1950 4350 1950
-Wire Wire Line
-	4350 1950 4350 1950
-Text Label 4350 1950 2    60   ~ 0
-AGND
+$Sheet
+S 2600 2950 1050 850 
+U 58B347F0
+F0 "Codec" 60
+F1 "codec.sch" 60
+F2 "3.3V" I L 2600 3050 60 
+F3 "DGND" I L 2600 3200 60 
+F4 "5V" I L 2600 3350 60 
+F5 "AGND" I L 2600 3500 60 
+$EndSheet
+$Sheet
+S 2150 1850 1350 750 
+U 58B3513F
+F0 "power schematic" 60
+F1 "power.sch" 60
+$EndSheet
 $EndSCHEMATC

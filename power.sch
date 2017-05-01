@@ -1,0 +1,235 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:openloop
+LIBS:looper-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BARREL_JACK CON1
+U 1 1 58B35157
+P 1600 1650
+F 0 "CON1" H 1600 1900 50  0000 C CNN
+F 1 "BARREL_JACK" H 1600 1450 50  0000 C CNN
+F 2 "" H 1600 1650 50  0000 C CNN
+F 3 "" H 1600 1650 50  0000 C CNN
+	1    1600 1650
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58B351BB
+P 2450 1750
+F 0 "#PWR01" H 2450 1500 50  0001 C CNN
+F 1 "GND" H 2450 1600 50  0000 C CNN
+F 2 "" H 2450 1750 50  0000 C CNN
+F 3 "" H 2450 1750 50  0000 C CNN
+	1    2450 1750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1900 1650
+Text Label 2000 1550 0    60   ~ 0
+9V
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 58B352C2
+P 1950 1550
+F 0 "#FLG02" H 1950 1645 50  0001 C CNN
+F 1 "PWR_FLAG" H 1950 1730 50  0000 C CNN
+F 2 "" H 1950 1550 50  0000 C CNN
+F 3 "" H 1950 1550 50  0000 C CNN
+	1    1950 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 58B35302
+P 1950 1750
+F 0 "#FLG03" H 1950 1845 50  0001 C CNN
+F 1 "PWR_FLAG" H 1950 1930 50  0000 C CNN
+F 2 "" H 1950 1750 50  0000 C CNN
+F 3 "" H 1950 1750 50  0000 C CNN
+	1    1950 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 58B3537F
+P 3550 1650
+F 0 "C1" H 3560 1720 50  0000 L CNN
+F 1 "10uF" H 3300 1650 50  0000 L CNN
+F 2 "" H 3550 1650 50  0000 C CNN
+F 3 "" H 3550 1650 50  0000 C CNN
+	1    3550 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L AP3211 U2
+U 1 1 58B351FE
+P 4100 1750
+F 0 "U2" H 4000 2100 60  0000 C CNN
+F 1 "AP3211" H 4100 1450 60  0000 C CNN
+F 2 "" H 4100 1750 60  0000 C CNN
+F 3 "" H 4100 1750 60  0000 C CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1750 3550 1950
+Wire Wire Line
+	3700 1750 3650 1750
+Wire Wire Line
+	3650 1750 3650 1550
+Wire Wire Line
+	3550 1950 3700 1950
+$Comp
+L C_Small C2
+U 1 1 58B35625
+P 4600 1650
+F 0 "C2" H 4610 1720 50  0000 L CNN
+F 1 "10nF" H 4700 1650 50  0000 L CNN
+F 2 "" H 4600 1650 50  0000 C CNN
+F 3 "" H 4600 1650 50  0000 C CNN
+	1    4600 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1550 4600 1550
+$Comp
+L D_Small_ALT D1
+U 1 1 58B356A7
+P 4750 1850
+F 0 "D1" H 4700 1930 50  0000 L CNN
+F 1 "Diode" H 4650 1800 50  0001 L CNN
+F 2 "" V 4750 1850 50  0000 C CNN
+F 3 "" V 4750 1850 50  0000 C CNN
+	1    4750 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L L_Small L1
+U 1 1 58B357CF
+P 5050 1750
+F 0 "L1" V 5100 1750 50  0000 L CNN
+F 1 "4.7uH" V 5000 1650 50  0000 L CNN
+F 2 "" H 5050 1750 50  0000 C CNN
+F 3 "" H 5050 1750 50  0000 C CNN
+	1    5050 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1900 1550 3700 1550
+Connection ~ 3550 1550
+Wire Wire Line
+	1900 1750 3550 1750
+Connection ~ 1950 1750
+Connection ~ 2450 1750
+Connection ~ 1950 1550
+Wire Wire Line
+	4500 1750 4950 1750
+Connection ~ 4750 1750
+Connection ~ 4600 1750
+$Comp
+L R_Small R1
+U 1 1 58B360A5
+P 5250 1850
+F 0 "R1" H 5280 1870 50  0000 L CNN
+F 1 "68k" H 5280 1810 50  0000 L CNN
+F 2 "" H 5250 1850 50  0000 C CNN
+F 3 "" H 5250 1850 50  0000 C CNN
+	1    5250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R2
+U 1 1 58B360E7
+P 5250 2150
+F 0 "R2" H 5280 2170 50  0000 L CNN
+F 1 "12k" H 5280 2110 50  0000 L CNN
+F 2 "" H 5250 2150 50  0000 C CNN
+F 3 "" H 5250 2150 50  0000 C CNN
+	1    5250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 58B3611B
+P 5750 1850
+F 0 "C3" H 5760 1920 50  0000 L CNN
+F 1 "22uF" H 5850 1850 50  0000 L CNN
+F 2 "" H 5750 1850 50  0000 C CNN
+F 3 "" H 5750 1850 50  0000 C CNN
+	1    5750 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58B36556
+P 4750 2250
+F 0 "#PWR04" H 4750 2000 50  0001 C CNN
+F 1 "GND" H 4750 2100 50  0000 C CNN
+F 2 "" H 4750 2250 50  0000 C CNN
+F 3 "" H 4750 2250 50  0000 C CNN
+	1    4750 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1750 6150 1750
+Connection ~ 5250 1750
+Wire Wire Line
+	5750 2250 5750 1950
+Wire Wire Line
+	4750 2250 5750 2250
+Connection ~ 5250 2250
+Wire Wire Line
+	4750 1950 4750 2250
+Wire Wire Line
+	5250 1950 4500 1950
+Wire Wire Line
+	5250 1950 5250 2050
+Connection ~ 5250 1950
+Connection ~ 3550 1750
+Connection ~ 3650 1550
+Connection ~ 5750 1750
+Text Label 6150 1750 0    60   ~ 0
+5.4V
+$EndSCHEMATC
