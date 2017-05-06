@@ -191,19 +191,7 @@ F 3 "" H 2500 5750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 6450 3300 6450
-Wire Wire Line
-	6200 2150 7800 2150
-Wire Wire Line
-	7800 2700 6200 2700
-Text Notes 3650 6550 0    60   ~ 0
-stopping will power down adc/dac, restarting powers them up again\nvolume needs to be updated for correct settings again!
-Text Label 3350 6450 0    60   ~ 0
-MCLK
-Wire Wire Line
-	1800 1750 1600 1750
-Text Label 1600 1750 2    60   ~ 0
-I2S3_WS
+	6200 2700 7800 2700
 $Comp
 L STM32F401RC U?
 U 2 1 58FD4D8F
@@ -234,25 +222,17 @@ Text Label 1050 3200 2    60   ~ 0
 3.3V
 Text Label 1050 3400 2    60   ~ 0
 GND
-Text Label 1800 3550 2    60   ~ 0
-I2S3_CK
-Text Label 1800 4100 2    60   ~ 0
-I2S3_SD
 Text Label 3300 3850 0    60   ~ 0
 I2S2_WS
 Text Label 3300 3550 0    60   ~ 0
 I2S2_CK
 Text Label 3300 3050 0    60   ~ 0
 I2S2_SD
-Text Label 7800 2250 2    60   ~ 0
-I2S3_CK
-Text Label 7800 2350 2    60   ~ 0
-I2S3_WS
 Text Label 7800 2450 2    60   ~ 0
-I2S3_SD
-Text Label 7800 2800 2    60   ~ 0
+I2S2ext
+Text Label 6200 2800 0    60   ~ 0
 I2S2_CK
-Text Label 7800 2900 2    60   ~ 0
+Text Label 6200 2900 0    60   ~ 0
 I2S2_WS
 Text Label 7800 3000 2    60   ~ 0
 I2S2_SD
@@ -264,30 +244,29 @@ Text Notes 7800 1800 2    60   ~ 0
 temporary LOW -> 16bit
 Text Notes 7800 1900 2    60   ~ 0
 temporary LOW -> no de-emphasis
-Wire Notes Line
-	3300 6250 7100 6250
-Wire Notes Line
-	7100 6250 7100 6650
-Wire Notes Line
-	7100 6650 3300 6650
-Wire Notes Line
-	3300 6650 3300 6250
-Text Label 6200 6100 0    60   ~ 0
-to_*MCLK
-Text Notes 4350 6200 0    60   ~ 0
-decide on this or stm being i2s master
-Wire Wire Line
-	6200 6450 6200 6100
-Wire Wire Line
-	1800 6450 1550 6450
-Text Label 1550 6450 2    60   ~ 0
+Text Label 1800 6450 2    60   ~ 0
 I2S2_MCK
-Wire Wire Line
-	1800 6700 1550 6700
-Text Label 1550 6700 2    60   ~ 0
-I2S3_MCK
-Text Label 6200 2150 0    60   ~ 0
-I2S3_MCK
 Text Label 6200 2700 0    60   ~ 0
 I2S2_MCK
+Wire Wire Line
+	7200 2700 7200 2150
+Connection ~ 7200 2700
+Wire Wire Line
+	7200 2150 7800 2150
+Wire Wire Line
+	7800 2800 6200 2800
+Wire Wire Line
+	6200 2900 7800 2900
+Wire Wire Line
+	7250 2800 7250 2250
+Wire Wire Line
+	7250 2250 7800 2250
+Connection ~ 7250 2800
+Wire Wire Line
+	7300 2900 7300 2350
+Wire Wire Line
+	7300 2350 7800 2350
+Connection ~ 7300 2900
+Text Label 1800 5400 2    60   ~ 0
+I2S2ext
 $EndSCHEMATC
