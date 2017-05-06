@@ -96,11 +96,11 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
-Title ""
+Sheet 2 4
+Title "FG_27"
 Date ""
-Rev ""
-Comp ""
+Rev "3.87"
+Comp "Jonathan Halmen"
 Comment1 ""
 Comment2 ""
 Comment3 ""
