@@ -98,10 +98,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
-Title ""
+Title "FG_27"
 Date ""
-Rev ""
-Comp ""
+Rev "3.87"
+Comp "Jonathan Halmen"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -193,14 +193,9 @@ $EndComp
 Wire Wire Line
 	6200 6450 3300 6450
 Wire Wire Line
-	6200 2150 6200 2700
-Wire Wire Line
-	6200 2700 6200 6450
-Wire Wire Line
 	6200 2150 7800 2150
 Wire Wire Line
 	7800 2700 6200 2700
-Connection ~ 6200 2700
 Text Notes 3650 6550 0    60   ~ 0
 stopping will power down adc/dac, restarting powers them up again\nvolume needs to be updated for correct settings again!
 Text Label 3350 6450 0    60   ~ 0
@@ -229,7 +224,7 @@ L SW_SPDT SW?
 U 1 1 58FD6197
 P 1250 3300
 F 0 "SW?" H 1250 3470 50  0000 C CNN
-F 1 "SW_SPDT" H 1250 3100 50  0000 C CNN
+F 1 "RAM~FLASH" H 1250 3100 50  0000 C CNN
 F 2 "" H 1250 3300 50  0001 C CNN
 F 3 "" H 1250 3300 50  0001 C CNN
 	1    1250 3300
@@ -269,4 +264,30 @@ Text Notes 7800 1800 2    60   ~ 0
 temporary LOW -> 16bit
 Text Notes 7800 1900 2    60   ~ 0
 temporary LOW -> no de-emphasis
+Wire Notes Line
+	3300 6250 7100 6250
+Wire Notes Line
+	7100 6250 7100 6650
+Wire Notes Line
+	7100 6650 3300 6650
+Wire Notes Line
+	3300 6650 3300 6250
+Text Label 6200 6100 0    60   ~ 0
+to_*MCLK
+Text Notes 4350 6200 0    60   ~ 0
+decide on this or stm being i2s master
+Wire Wire Line
+	6200 6450 6200 6100
+Wire Wire Line
+	1800 6450 1550 6450
+Text Label 1550 6450 2    60   ~ 0
+I2S2_MCK
+Wire Wire Line
+	1800 6700 1550 6700
+Text Label 1550 6700 2    60   ~ 0
+I2S3_MCK
+Text Label 6200 2150 0    60   ~ 0
+I2S3_MCK
+Text Label 6200 2700 0    60   ~ 0
+I2S2_MCK
 $EndSCHEMATC
