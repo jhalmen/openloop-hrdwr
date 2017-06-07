@@ -177,8 +177,6 @@ F 3 "" H 8450 2350 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	7650 1550 7800 1550
-Text Label 7650 1550 0    60   ~ 0
-3.3V
 $Comp
 L STM32F401RC U?
 U 3 1 58FD347E
@@ -228,22 +226,14 @@ Text Label 3300 3550 0    60   ~ 0
 I2S2_CK
 Text Label 3300 3050 0    60   ~ 0
 I2S2_SD
-Text Label 7800 2450 2    60   ~ 0
+Text Label 7800 3000 2    60   ~ 0
 I2S2ext
 Text Label 6200 2800 0    60   ~ 0
 I2S2_CK
 Text Label 6200 2900 0    60   ~ 0
 I2S2_WS
-Text Label 7800 3000 2    60   ~ 0
+Text Label 7800 2450 2    60   ~ 0
 I2S2_SD
-Text Notes 7750 1600 2    60   ~ 0
-temporary left midrail.\n-> hardware control
-Text Notes 7800 1700 2    60   ~ 0
-temporary HIGH -> I2S mode
-Text Notes 7800 1800 2    60   ~ 0
-temporary LOW -> 16bit
-Text Notes 7800 1900 2    60   ~ 0
-temporary LOW -> no de-emphasis
 Text Label 1800 6450 2    60   ~ 0
 I2S2_MCK
 Text Label 6200 2700 0    60   ~ 0
@@ -254,7 +244,7 @@ Connection ~ 7200 2700
 Wire Wire Line
 	7200 2150 7800 2150
 Wire Wire Line
-	7800 2800 6200 2800
+	6200 2800 7800 2800
 Wire Wire Line
 	6200 2900 7800 2900
 Wire Wire Line
@@ -269,4 +259,34 @@ Wire Wire Line
 Connection ~ 7300 2900
 Text Label 1800 5400 2    60   ~ 0
 I2S2ext
+$Comp
+L GND #PWR?
+U 1 1 593872BF
+P 7650 1550
+F 0 "#PWR?" H 7650 1300 50  0001 C CNN
+F 1 "GND" H 7650 1400 50  0000 C CNN
+F 2 "" H 7650 1550 50  0001 C CNN
+F 3 "" H 7650 1550 50  0001 C CNN
+	1    7650 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1700 7750 1700
+Wire Wire Line
+	7750 1700 7750 1550
+Connection ~ 7750 1550
+Wire Wire Line
+	7800 1800 7400 1800
+Wire Wire Line
+	7800 1900 7400 1900
+Text Label 7400 1800 2    60   ~ 0
+I2C1_SDA
+Text Label 7400 1900 2    60   ~ 0
+I2C1_SCL
+Text Label 1800 4600 2    60   ~ 0
+I2C1_SDA
+Text Label 1800 4350 2    60   ~ 0
+I2C1_SCL
+Text GLabel 1600 3300 1    60   Input ~ 0
+BOOT
 $EndSCHEMATC
