@@ -915,17 +915,6 @@ F 3 "" H 7100 4300 50  0001 C CNN
 $EndComp
 Text Label 6900 4100 1    60   ~ 0
 3.3V
-$Comp
-L GND #PWR?
-U 1 1 58D0B0AD
-P 7650 5550
-F 0 "#PWR?" H 7650 5300 50  0001 C CNN
-F 1 "GND" H 7650 5400 50  0000 C CNN
-F 2 "" H 7650 5550 50  0001 C CNN
-F 3 "" H 7650 5550 50  0001 C CNN
-	1    7650 5550
-	1    0    0    -1  
-$EndComp
 Text Notes 6500 3850 0    60   ~ 0
 unless implemented,\nconnect VBAT pin like this to 3.3v
 $Comp
@@ -1217,4 +1206,6 @@ Wire Notes Line
 	6500 3850 6500 4450
 Connection ~ 2150 1550
 Connection ~ 2150 1750
+Text GLabel 7650 5550 0    60   Input ~ 0
+BOOT
 $EndSCHEMATC
