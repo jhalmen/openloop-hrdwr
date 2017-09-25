@@ -17,8 +17,23 @@ K LDO
 F ../datasheets/LDO_3.3V.pdf
 $ENDCMP
 #
+$CMP BARREL_JACK
+D DC Barrel Jack
+K DC power barrel jack connector
+$ENDCMP
+#
+$CMP JACK_3P
+D 3-pin stereo audio Jack
+K audio jack
+$ENDCMP
+#
 $CMP JMP
 D Copper block for ground connection
+$ENDCMP
+#
+$CMP MAX4466
+D Low-Cost, Micropower, Microphone Preamplifier
+F http://datasheets.maximintegrated.com/en/ds/MAX4465-MAX4469.pdf
 $ENDCMP
 #
 $CMP STM32F401RC

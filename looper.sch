@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 3
 LIBS:openloop
 LIBS:74xgxx
 LIBS:74xx
@@ -34,7 +34,6 @@ LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
-LIBS:intersil
 LIBS:ir
 LIBS:Lattice
 LIBS:leds
@@ -92,22 +91,23 @@ LIBS:Xicor
 LIBS:xilinx
 LIBS:zetex
 LIBS:Zilog
-EELAYER 25 0
+LIBS:looper-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
-Title "FG_27"
-Date ""
-Rev "3.87"
-Comp "Jonathan Halmen"
+Title "OpenLoop"
+Date "2017-09-25"
+Rev "A"
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 2150 1850 1350 750 
+S 2900 1550 1350 750 
 U 58B3513F
 F0 "power schematic" 60
 F1 "power.sch" 60
