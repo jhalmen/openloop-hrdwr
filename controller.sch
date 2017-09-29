@@ -30,7 +30,6 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
@@ -38,7 +37,6 @@ LIBS:ir
 LIBS:Lattice
 LIBS:leds
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:mechanical
 LIBS:memory

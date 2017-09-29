@@ -30,7 +30,6 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
@@ -38,7 +37,6 @@ LIBS:ir
 LIBS:Lattice
 LIBS:leds
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:mechanical
 LIBS:memory
@@ -291,7 +289,7 @@ U 1 1 59C88CBF
 P 3550 2700
 F 0 "U7" H 3550 2850 50  0000 L CNN
 F 1 "MAX4466" H 3550 2550 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-353_SC-70-5_Handsoldering" H 3550 2550 50  0001 L CNN
+F 2 "footprints:SOT-353_SC-70-5_Handsoldering" H 3550 2550 50  0001 L CNN
 F 3 "" H 3700 2850 50  0001 C CNN
 	1    3550 2700
 	1    0    0    -1  
@@ -696,7 +694,7 @@ L JACK_3P J8
 U 1 1 59C96013
 P 10050 3450
 F 0 "J8" H 9572 3433 50  0000 R CNN
-F 1 "JACK_3P" H 9572 3524 50  0000 R CNN
+F 1 "stereo_out" H 9572 3524 50  0000 R CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 10050 3450 50  0001 C CNN
 F 3 "" H 10050 3450 50  0001 C CNN
 	1    10050 3450
@@ -710,4 +708,10 @@ Wire Wire Line
 	9600 3450 8650 3450
 Wire Wire Line
 	8650 3450 8650 3900
+Text Label 8850 3450 0    60   ~ 0
+voutl
+Text Label 8850 3100 0    60   ~ 0
+voutr
+Text GLabel 3450 2100 2    60   Input ~ 0
+5V
 $EndSCHEMATC
