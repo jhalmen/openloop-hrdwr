@@ -463,9 +463,9 @@ Text Label 1800 1200 2    60   ~ 0
 rot_but
 Text Label 9150 5500 0    60   ~ 0
 rot_but
-Text Label 7850 5500 2    60   ~ 0
-TIM2_CH1
 Text Label 7850 5700 2    60   ~ 0
+TIM2_CH1
+Text Label 7850 5500 2    60   ~ 0
 TIM2_CH2
 $Comp
 L R_Small R7
