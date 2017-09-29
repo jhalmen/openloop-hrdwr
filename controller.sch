@@ -254,7 +254,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 2350 7800 2350
 Connection ~ 7300 2900
-Text Label 1800 5400 2    60   ~ 0
+Text Label 3300 3300 0    60   ~ 0
 I2S2ext
 $Comp
 L GND #PWR027
