@@ -30,7 +30,6 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
@@ -38,7 +37,6 @@ LIBS:ir
 LIBS:Lattice
 LIBS:leds
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:mechanical
 LIBS:memory
@@ -112,7 +110,7 @@ U 1 1 58B35157
 P 1600 1650
 F 0 "CON1" H 1350 1900 50  0000 C CNN
 F 1 "BARREL_JACK" H 1400 1500 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" H 1600 1650 50  0001 C CNN
+F 2 "footprints:PJ-037A" H 1600 1650 50  0001 C CNN
 F 3 "" H 1600 1650 50  0000 C CNN
 	1    1600 1650
 	1    0    0    1   
@@ -1207,4 +1205,9 @@ Connection ~ 2150 1550
 Connection ~ 2150 1750
 Text GLabel 7650 5550 0    60   Input ~ 0
 BOOT
+Wire Wire Line
+	1900 1650 1950 1650
+Wire Wire Line
+	1950 1650 1950 1750
+Connection ~ 1950 1750
 $EndSCHEMATC
