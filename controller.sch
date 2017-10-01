@@ -471,12 +471,12 @@ $Comp
 L R_Small R7
 U 1 1 59C7D0FB
 P 8900 5400
-F 0 "R7" H 8959 5446 50  0000 L CNN
-F 1 "4.7k" H 8959 5355 50  0000 L CNN
+F 0 "R7" H 8750 5450 50  0000 L CNN
+F 1 "4.7k" H 8700 5350 50  0000 L CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 8900 5400 50  0001 C CNN
 F 3 "" H 8900 5400 50  0001 C CNN
 	1    8900 5400
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	8650 5500 9150 5500
