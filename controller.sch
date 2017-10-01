@@ -173,7 +173,9 @@ F 3 "" H 8450 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 1550 7800 1550
+	7650 1550 7750 1550
+Wire Wire Line
+	7750 1550 7800 1550
 $Comp
 L STM32F401RC U5
 U 3 1 58FD347E
@@ -186,7 +188,9 @@ F 3 "" H 2500 5750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 2700 7800 2700
+	6700 2700 7200 2700
+Wire Wire Line
+	7200 2700 7800 2700
 $Comp
 L STM32F401RC U5
 U 2 1 58FD4D8F
@@ -241,9 +245,13 @@ Connection ~ 7200 2700
 Wire Wire Line
 	7200 2150 7800 2150
 Wire Wire Line
-	6700 2800 7800 2800
+	6700 2800 7250 2800
 Wire Wire Line
-	6700 2900 7800 2900
+	7250 2800 7800 2800
+Wire Wire Line
+	6700 2900 7300 2900
+Wire Wire Line
+	7300 2900 7800 2900
 Wire Wire Line
 	7250 2800 7250 2250
 Wire Wire Line
@@ -273,9 +281,13 @@ Wire Wire Line
 	7750 1700 7750 1550
 Connection ~ 7750 1550
 Wire Wire Line
-	6700 1800 7800 1800
+	6700 1800 7150 1800
 Wire Wire Line
-	6700 1900 7800 1900
+	7150 1800 7800 1800
+Wire Wire Line
+	6700 1900 6850 1900
+Wire Wire Line
+	6850 1900 7800 1900
 Text Label 6700 1800 2    60   ~ 0
 I2C1_SDA
 Text Label 6700 1900 2    60   ~ 0
@@ -330,7 +342,9 @@ Wire Wire Line
 	7150 1750 7150 1800
 Connection ~ 7150 1800
 Wire Wire Line
-	6850 1550 7300 1550
+	6850 1550 7150 1550
+Wire Wire Line
+	7150 1550 7300 1550
 Connection ~ 7150 1550
 Text Label 7300 1550 0    60   ~ 0
 3.3V
@@ -371,7 +385,9 @@ F 3 "" H 7350 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 4650 7400 4650
+	6700 4650 6800 4650
+Wire Wire Line
+	6800 4650 7400 4650
 $Comp
 L R_Small R4
 U 1 1 59C7AE61
@@ -388,7 +404,7 @@ Text Label 6800 4450 0    60   ~ 0
 Connection ~ 6800 4650
 Text Label 6700 4650 2    60   ~ 0
 SDdetect
-Text Label 3300 5550 0    60   ~ 0
+Text Label 3300 700  0    60   ~ 0
 SDdetect
 Text Label 7400 4450 2    60   ~ 0
 SDIO_D0
@@ -444,7 +460,9 @@ F 3 "" H 8700 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8650 5700 8900 5700
+	8650 5700 8700 5700
+Wire Wire Line
+	8700 5700 8900 5700
 Wire Wire Line
 	8050 5700 7850 5700
 Wire Wire Line
@@ -479,7 +497,9 @@ F 3 "" H 8900 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8650 5500 9150 5500
+	8650 5500 8900 5500
+Wire Wire Line
+	8900 5500 9150 5500
 Text Label 8900 5300 0    60   ~ 0
 3.3V
 $Comp
@@ -521,7 +541,9 @@ Wire Wire Line
 Text Label 8150 6050 0    60   ~ 0
 3.3V
 Wire Wire Line
-	8000 6200 8200 6200
+	8000 6200 8100 6200
+Wire Wire Line
+	8100 6200 8200 6200
 $Comp
 L GND #PWR029
 U 1 1 59C7EAD2
@@ -581,7 +603,9 @@ Wire Wire Line
 Wire Wire Line
 	5150 2650 5150 3000
 Wire Wire Line
-	5150 3000 5250 3000
+	5150 3000 5200 3000
+Wire Wire Line
+	5200 3000 5250 3000
 $Comp
 L GND #PWR024
 U 1 1 59C7F568
@@ -633,7 +657,9 @@ F 3 "" H 5050 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 3950 5250 4400
+	5250 3950 5250 4300
+Wire Wire Line
+	5250 4300 5250 4400
 Connection ~ 5250 4300
 $Comp
 L GND #PWR025
