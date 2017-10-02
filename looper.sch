@@ -96,7 +96,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "OpenLoop"
-Date "2017-09-25"
+Date "2017-10-02"
 Rev "A"
 Comp ""
 Comment1 ""
