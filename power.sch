@@ -105,7 +105,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L BARREL_JACK CON1
+L BARREL_JACK_2P CON1
 U 1 1 58B35157
 P 1600 1650
 F 0 "CON1" H 1350 1900 50  0000 C CNN
@@ -1205,9 +1205,4 @@ Connection ~ 2150 1550
 Connection ~ 2150 1750
 Text GLabel 7650 5550 0    60   Input ~ 0
 BOOT
-Wire Wire Line
-	1900 1650 1950 1650
-Wire Wire Line
-	1950 1650 1950 1750
-Connection ~ 1950 1750
 $EndSCHEMATC
