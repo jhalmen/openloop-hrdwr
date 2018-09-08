@@ -1,95 +1,4 @@
-EESchema Schematic File Version 3
-LIBS:openloop
-LIBS:74xgxx
-LIBS:74xx
-LIBS:ac-dc
-LIBS:actel
-LIBS:adc-dac
-LIBS:allegro
-LIBS:Altera
-LIBS:analog_devices
-LIBS:analog_switches
-LIBS:atmel
-LIBS:audio
-LIBS:battery_management
-LIBS:bbd
-LIBS:bosch
-LIBS:brooktre
-LIBS:cmos_ieee
-LIBS:cmos4000
-LIBS:conn
-LIBS:contrib
-LIBS:cypress
-LIBS:dc-dc
-LIBS:device
-LIBS:digital-audio
-LIBS:diode
-LIBS:display
-LIBS:dsp
-LIBS:elec-unifil
-LIBS:ESD_Protection
-LIBS:ftdi
-LIBS:gennum
-LIBS:hc11
-LIBS:intel
-LIBS:interface
-LIBS:ir
-LIBS:Lattice
-LIBS:leds
-LIBS:linear
-LIBS:maxim
-LIBS:mechanical
-LIBS:memory
-LIBS:microchip
-LIBS:microchip_dspic33dsc
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic24mcu
-LIBS:microchip_pic32mcu
-LIBS:microcontrollers
-LIBS:modules
-LIBS:motor_drivers
-LIBS:motorola
-LIBS:motors
-LIBS:msp430
-LIBS:nordicsemi
-LIBS:nxp
-LIBS:nxp_armmcu
-LIBS:onsemi
-LIBS:opto
-LIBS:Oscillators
-LIBS:philips
-LIBS:power
-LIBS:Power_Management
-LIBS:powerint
-LIBS:pspice
-LIBS:references
-LIBS:regul
-LIBS:relays
-LIBS:rfcom
-LIBS:sensors
-LIBS:silabs
-LIBS:siliconi
-LIBS:stm8
-LIBS:stm32
-LIBS:supertex
-LIBS:switches
-LIBS:texas
-LIBS:transf
-LIBS:transistors
-LIBS:triac_thyristor
-LIBS:ttl_ieee
-LIBS:valves
-LIBS:video
-LIBS:wiznet
-LIBS:Worldsemi
-LIBS:Xicor
-LIBS:xilinx
-LIBS:zetex
-LIBS:Zilog
-LIBS:looper-cache
+EESchema Schematic File Version 4
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -105,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L WM8778-units U1
+L openloop:WM8778-units U1
 U 3 1 58D0FD94
 P 6350 3500
 F 0 "U1" H 6050 4400 60  0000 C CNN
@@ -116,7 +25,7 @@ F 3 "" H 6100 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R20
+L Device:R_Small R20
 U 1 1 590F46EC
 P 7800 3900
 F 0 "R20" V 7875 3850 50  0000 L CNN
@@ -127,7 +36,7 @@ F 3 "" H 7800 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CP C43
+L Device:CP C43
 U 1 1 590F4BF4
 P 7450 3900
 F 0 "C43" H 7475 4000 50  0000 L CNN
@@ -138,7 +47,7 @@ F 3 "" H 7450 3900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C45
+L Device:C_Small C45
 U 1 1 590F4CDD
 P 7950 4000
 F 0 "C45" H 7960 4070 50  0000 L CNN
@@ -151,7 +60,7 @@ $EndComp
 Wire Wire Line
 	7250 3900 7300 3900
 $Comp
-L AGND #PWR043
+L openloop:AGND #PWR043
 U 1 1 590F584D
 P 7950 4150
 F 0 "#PWR043" H 7950 3900 50  0001 C CNN
@@ -174,7 +83,7 @@ Wire Notes Line
 Text Notes 7300 2800 0    60   ~ 0
 implement better LPF + 2xmult, \nsee wolfson datasheet
 $Comp
-L R_Small R18
+L Device:R_Small R18
 U 1 1 59384C92
 P 7650 4000
 F 0 "R18" H 7650 4125 50  0000 L CNN
@@ -185,7 +94,7 @@ F 3 "" H 7650 4000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L AGND #PWR041
+L openloop:AGND #PWR041
 U 1 1 59384CD4
 P 7650 4150
 F 0 "#PWR041" H 7650 3900 50  0001 C CNN
@@ -197,14 +106,8 @@ F 3 "" H 7650 4150 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	7650 4150 7650 4100
-Wire Wire Line
-	7600 3900 7700 3900
-Connection ~ 7650 3900
-Wire Wire Line
-	7900 3900 8650 3900
-Connection ~ 7950 3900
 $Comp
-L R_Small R19
+L Device:R_Small R19
 U 1 1 59386657
 P 7800 3100
 F 0 "R19" V 7875 3050 50  0000 L CNN
@@ -215,7 +118,7 @@ F 3 "" H 7800 3100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CP C42
+L Device:CP C42
 U 1 1 5938665D
 P 7450 3100
 F 0 "C42" H 7475 3200 50  0000 L CNN
@@ -226,7 +129,7 @@ F 3 "" H 7450 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C44
+L Device:C_Small C44
 U 1 1 59386663
 P 7950 3200
 F 0 "C44" H 7960 3270 50  0000 L CNN
@@ -237,7 +140,7 @@ F 3 "" H 7950 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AGND #PWR042
+L openloop:AGND #PWR042
 U 1 1 5938666A
 P 7950 3350
 F 0 "#PWR042" H 7950 3100 50  0001 C CNN
@@ -252,7 +155,7 @@ Wire Wire Line
 Wire Notes Line
 	7300 2825 8100 2825
 $Comp
-L R_Small R17
+L Device:R_Small R17
 U 1 1 59386675
 P 7650 3200
 F 0 "R17" H 7650 3325 50  0000 L CNN
@@ -263,7 +166,7 @@ F 3 "" H 7650 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L AGND #PWR040
+L openloop:AGND #PWR040
 U 1 1 5938667B
 P 7650 3350
 F 0 "#PWR040" H 7650 3100 50  0001 C CNN
@@ -276,15 +179,9 @@ $EndComp
 Wire Wire Line
 	7650 3350 7650 3300
 Wire Wire Line
-	7600 3100 7700 3100
-Connection ~ 7650 3100
-Wire Wire Line
-	7900 3100 9600 3100
-Connection ~ 7950 3100
-Wire Wire Line
 	7250 3100 7300 3100
 $Comp
-L MAX4466 U7
+L openloop:MAX4466 U7
 U 1 1 59C88CBF
 P 3550 2700
 F 0 "U7" H 3550 2850 50  0000 L CNN
@@ -295,7 +192,7 @@ F 3 "" H 3700 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C36
+L Device:C_Small C36
 U 1 1 59C8910C
 P 3000 3100
 F 0 "C36" H 3010 3170 50  0000 L CNN
@@ -306,7 +203,7 @@ F 3 "" H 3000 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R13
+L Device:R_Small R13
 U 1 1 59C892C0
 P 3000 2900
 F 0 "R13" V 3075 2850 50  0000 L CNN
@@ -317,9 +214,9 @@ F 3 "" H 3000 2900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3000 2800 3250 2800
+	3000 2800 3200 2800
 $Comp
-L AGND #PWR036
+L openloop:AGND #PWR036
 U 1 1 59C8A57B
 P 3000 3200
 F 0 "#PWR036" H 3000 2950 50  0001 C CNN
@@ -330,7 +227,7 @@ F 3 "" H 3000 3200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R14
+L Device:R_Small R14
 U 1 1 59C8A59E
 P 3450 3200
 F 0 "R14" V 3525 3150 50  0000 L CNN
@@ -341,7 +238,7 @@ F 3 "" H 3450 3200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C37
+L Device:C_Small C37
 U 1 1 59C8A5F7
 P 3450 3350
 F 0 "C37" H 3460 3420 50  0000 L CNN
@@ -354,20 +251,20 @@ $EndComp
 Wire Wire Line
 	3200 3350 3350 3350
 Wire Wire Line
-	3200 2800 3200 3350
+	3200 2800 3200 3200
 Connection ~ 3200 2800
 Wire Wire Line
 	3350 3200 3200 3200
 Connection ~ 3200 3200
 Wire Wire Line
-	3900 2700 3900 3350
+	3900 2700 3900 3200
 Wire Wire Line
 	3900 2700 3850 2700
 Wire Wire Line
 	3900 3350 3550 3350
 Connection ~ 3900 3200
 $Comp
-L AGND #PWR037
+L openloop:AGND #PWR037
 U 1 1 59C8A7EC
 P 3650 3000
 F 0 "#PWR037" H 3650 2750 50  0001 C CNN
@@ -380,7 +277,7 @@ $EndComp
 Wire Wire Line
 	3650 3000 3450 3000
 $Comp
-L R_Small R11
+L Device:R_Small R11
 U 1 1 59C8AB23
 P 2550 2450
 F 0 "R11" V 2625 2400 50  0000 L CNN
@@ -391,7 +288,7 @@ F 3 "" H 2550 2450 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R_Small R12
+L Device:R_Small R12
 U 1 1 59C8AB75
 P 2550 2750
 F 0 "R12" V 2625 2700 50  0000 L CNN
@@ -402,12 +299,12 @@ F 3 "" H 2550 2750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2550 2550 2550 2650
+	2550 2550 2550 2600
 Wire Wire Line
-	2400 2600 3250 2600
+	2400 2600 2550 2600
 Connection ~ 2550 2600
 $Comp
-L AGND #PWR035
+L openloop:AGND #PWR035
 U 1 1 59C8AC11
 P 2550 2850
 F 0 "#PWR035" H 2550 2600 50  0001 C CNN
@@ -418,7 +315,7 @@ F 3 "" H 2550 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C35
+L Device:C_Small C35
 U 1 1 59C8AD88
 P 2300 2600
 F 0 "C35" H 2310 2670 50  0000 L CNN
@@ -429,7 +326,7 @@ F 3 "" H 2300 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Small R10
+L Device:R_Small R10
 U 1 1 59C8AE57
 P 2050 2500
 F 0 "R10" V 2125 2450 50  0000 L CNN
@@ -440,7 +337,7 @@ F 3 "" H 2050 2500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R_Small R9
+L Device:R_Small R9
 U 1 1 59C8AF13
 P 2050 2200
 F 0 "R9" V 2125 2150 50  0000 L CNN
@@ -451,7 +348,7 @@ F 3 "" H 2050 2200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L AGND #PWR034
+L openloop:AGND #PWR034
 U 1 1 59C8AF59
 P 1900 2850
 F 0 "#PWR034" H 1900 2600 50  0001 C CNN
@@ -462,7 +359,7 @@ F 3 "" H 1900 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C34
+L Device:C_Small C34
 U 1 1 59C8AF8A
 P 1900 2750
 F 0 "C34" H 1910 2820 50  0000 L CNN
@@ -473,37 +370,36 @@ F 3 "" H 1900 2750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1100 2600 2200 2600
-Connection ~ 2050 2600
+	1100 2600 1500 2600
 Wire Wire Line
 	1900 2650 1900 2350
 Wire Wire Line
 	1900 2350 2050 2350
 Wire Wire Line
-	2050 2300 2050 2400
+	2050 2300 2050 2350
 Connection ~ 2050 2350
 Wire Wire Line
-	2050 2100 3450 2100
+	2050 2100 2550 2100
 Wire Wire Line
 	3450 2100 3450 2400
 Wire Wire Line
 	2550 2350 2550 2100
 Connection ~ 2550 2100
 $Comp
-L CONN_01X02 J5
+L Connector:Conn_01x02_Male J5
 U 1 1 59C8B2B5
-P 900 2650
-F 0 "J5" H 819 2375 50  0000 C CNN
-F 1 "electret mic" H 819 2466 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" H 900 2650 50  0001 C CNN
-F 3 "" H 900 2650 50  0001 C CNN
-	1    900  2650
-	-1   0    0    1   
+P 900 2700
+F 0 "J5" H 819 2425 50  0000 C CNN
+F 1 "electret mic" H 819 2516 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" H 900 2700 50  0001 C CNN
+F 3 "" H 900 2700 50  0001 C CNN
+	1    900  2700
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	1100 2700 1250 2700
 $Comp
-L AGND #PWR032
+L openloop:AGND #PWR032
 U 1 1 59C8B3F6
 P 1250 2700
 F 0 "#PWR032" H 1250 2450 50  0001 C CNN
@@ -514,7 +410,7 @@ F 3 "" H 1250 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AGND #PWR033
+L openloop:AGND #PWR033
 U 1 1 59C8B6D1
 P 1650 3900
 F 0 "#PWR033" H 1650 3650 50  0001 C CNN
@@ -525,11 +421,11 @@ F 3 "" H 1650 3900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 3900 1700 3900
+	1500 3900 1650 3900
 Wire Wire Line
-	3550 3200 4050 3200
+	3550 3200 3900 3200
 $Comp
-L R_Small R15
+L Device:R_Small R15
 U 1 1 59C8BC84
 P 4150 3200
 F 0 "R15" V 4225 3150 50  0000 L CNN
@@ -540,7 +436,7 @@ F 3 "" H 4150 3200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C38
+L Device:C_Small C38
 U 1 1 59C8BDCD
 P 4450 3300
 F 0 "C38" H 4460 3370 50  0000 L CNN
@@ -551,7 +447,7 @@ F 3 "" H 4450 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C40
+L Device:C_Small C40
 U 1 1 59C8C0B6
 P 4950 3350
 F 0 "C40" H 4960 3420 50  0000 L CNN
@@ -563,10 +459,8 @@ F 3 "" H 4950 3350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5450 3350 5050 3350
-Wire Wire Line
-	4250 3200 4850 3200
 $Comp
-L AGND #PWR038
+L openloop:AGND #PWR038
 U 1 1 59C8C249
 P 4450 3400
 F 0 "#PWR038" H 4450 3150 50  0001 C CNN
@@ -578,9 +472,8 @@ F 3 "" H 4450 3400 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4850 3200 4850 3350
-Connection ~ 4450 3200
 $Comp
-L R_Small R16
+L Device:R_Small R16
 U 1 1 59C8C498
 P 4150 3650
 F 0 "R16" V 4225 3600 50  0000 L CNN
@@ -591,7 +484,7 @@ F 3 "" H 4150 3650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C39
+L Device:C_Small C39
 U 1 1 59C8C49F
 P 4450 3750
 F 0 "C39" H 4460 3820 50  0000 L CNN
@@ -602,7 +495,7 @@ F 3 "" H 4450 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C41
+L Device:C_Small C41
 U 1 1 59C8C4A6
 P 4950 3650
 F 0 "C41" H 4960 3720 50  0000 L CNN
@@ -614,10 +507,8 @@ F 3 "" H 4950 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5450 3650 5050 3650
-Wire Wire Line
-	4250 3650 4850 3650
 $Comp
-L AGND #PWR039
+L openloop:AGND #PWR039
 U 1 1 59C8C4AF
 P 4450 3850
 F 0 "#PWR039" H 4450 3600 50  0001 C CNN
@@ -627,9 +518,6 @@ F 3 "" H 4450 3850 50  0000 C CNN
 	1    4450 3850
 	1    0    0    -1  
 $EndComp
-Connection ~ 4450 3650
-Wire Wire Line
-	1500 3650 4050 3650
 Wire Wire Line
 	1500 2600 1500 1900
 Wire Wire Line
@@ -637,47 +525,47 @@ Wire Wire Line
 Connection ~ 4000 3200
 Connection ~ 1500 2600
 $Comp
-L GS2 J7
+L Connector:TestPoint_2Pole J7
 U 1 1 59C8D0BF
 P 2700 1900
-F 0 "J7" V 2483 1900 50  0000 C CNN
-F 1 "line/~mic" V 2581 1900 50  0000 C CNN
+F 0 "J7" H 2700 1950 50  0000 C CNN
+F 1 "line/~mic" H 2700 1800 50  0000 C CNN
 F 2 "Connectors:GS2" V 2774 1900 50  0001 C CNN
 F 3 "" H 2700 1900 50  0001 C CNN
 	1    2700 1900
-	0    1    1    0   
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1500 1900 2500 1900
 Wire Wire Line
 	2900 1900 4000 1900
 $Comp
-L JACK_2P J6
+L Connector:AudioJack2_Ground_Switch J6
 U 1 1 59C8E2E3
-P 1050 3750
-F 0 "J6" H 750 3550 50  0000 R CNN
-F 1 "line in" H 1200 3550 50  0000 R CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 1050 3750 50  0001 C CNN
-F 3 "" H 1050 3750 50  0001 C CNN
-	1    1050 3750
+P 1300 3800
+F 0 "J6" H 1000 3600 50  0000 R CNN
+F 1 "line in" H 1450 3600 50  0000 R CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 1300 3800 50  0001 C CNN
+F 3 "" H 1300 3800 50  0001 C CNN
+	1    1300 3800
 	1    0    0    1   
 $EndComp
 $Comp
-L R_Small R8
+L Device:R_Small R8
 U 1 1 59C8E744
-P 1600 3750
-F 0 "R8" V 1675 3700 50  0000 L CNN
-F 1 "1k" V 1600 3700 50  0000 L CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 1600 3750 50  0001 C CNN
-F 3 "" H 1600 3750 50  0001 C CNN
-	1    1600 3750
+P 1600 3700
+F 0 "R8" V 1675 3650 50  0000 L CNN
+F 1 "1k" V 1600 3650 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 1600 3700 50  0001 C CNN
+F 3 "" H 1600 3700 50  0001 C CNN
+	1    1600 3700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1700 3900 1700 3750
+	1700 3900 1700 3700
 Connection ~ 1650 3900
 $Comp
-L AGND #PWR044
+L openloop:AGND #PWR044
 U 1 1 59C90F45
 P 9050 4050
 F 0 "#PWR044" H 9050 3800 50  0001 C CNN
@@ -690,7 +578,7 @@ $EndComp
 Wire Wire Line
 	9050 4050 9600 4050
 $Comp
-L JACK_3P J8
+L openloop:JACK_3P J8
 U 1 1 59C96013
 P 10050 3450
 F 0 "J8" H 9572 3433 50  0000 R CNN
@@ -714,4 +602,65 @@ Text Label 8850 3100 0    60   ~ 0
 voutr
 Text GLabel 3450 2100 2    60   Input ~ 0
 5V
+Wire Wire Line
+	3200 2800 3250 2800
+Wire Wire Line
+	3200 3200 3200 3350
+Wire Wire Line
+	3900 3200 3900 3350
+Wire Wire Line
+	3900 3200 4000 3200
+Wire Wire Line
+	2550 2600 2550 2650
+Wire Wire Line
+	2550 2600 3250 2600
+Wire Wire Line
+	2050 2350 2050 2400
+Wire Wire Line
+	2550 2100 3450 2100
+Wire Wire Line
+	4000 3200 4050 3200
+Wire Wire Line
+	1650 3900 1700 3900
+Wire Wire Line
+	7600 3900 7650 3900
+Wire Wire Line
+	7900 3900 7950 3900
+Wire Wire Line
+	7600 3100 7650 3100
+Wire Wire Line
+	7900 3100 7950 3100
+Wire Wire Line
+	4250 3200 4450 3200
+Wire Wire Line
+	4250 3650 4450 3650
+Wire Wire Line
+	1500 2600 2050 2600
+Connection ~ 4450 3650
+Wire Wire Line
+	4450 3650 4850 3650
+Connection ~ 4450 3200
+Wire Wire Line
+	4450 3200 4850 3200
+Connection ~ 7650 3900
+Wire Wire Line
+	7650 3900 7700 3900
+Connection ~ 7950 3900
+Wire Wire Line
+	7950 3900 8650 3900
+Connection ~ 7950 3100
+Wire Wire Line
+	7950 3100 9600 3100
+Connection ~ 7650 3100
+Wire Wire Line
+	7650 3100 7700 3100
+Connection ~ 2050 2600
+Wire Wire Line
+	2050 2600 2200 2600
+Wire Wire Line
+	1500 3800 1900 3800
+Wire Wire Line
+	1900 3800 1900 3650
+Wire Wire Line
+	1900 3650 4050 3650
 $EndSCHEMATC
