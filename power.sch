@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
 Title "OpenLoop"
-Date "2017-10-02"
+Date "2018-06-20"
 Rev "A"
 Comp ""
 Comment1 ""
@@ -304,7 +304,7 @@ Digital Ground to Analog Ground connenction
 Text Notes 1150 1300 0    60   ~ 0
 9V Wall Supply
 Text Notes 2300 1050 0    60   ~ 0
-Reverse Polarity Protection?
+Reverse Polarity Protection
 Text Notes 5600 1000 0    60   ~ 0
 additional filtering required?
 $Comp
@@ -527,7 +527,7 @@ Text GLabel 5000 4050 2    79   Input ~ 0
 Text GLabel 1750 4650 0    79   Input ~ 0
 3.3V
 Text Notes 7700 3400 0    60   ~ 0
-caps against output or input ground?
+caps against output ground
 $Comp
 L openloop:AGND #PWR09
 U 1 1 58C8746B

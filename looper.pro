@@ -1,4 +1,4 @@
-update=Sat 08 Sep 2018 03:07:09 PM CEST
+update=Wed 14 Nov 2018 02:46:29 AM CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,16 +25,16 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
+[eeschema]
+version=1
+LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=layout.kicad_wks
-PlotDirectoryName=
+PlotDirectoryName=/home/djos/bachelortex/graphics/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=60
 ERC_TestSimilarLabels=1
-[eeschema]
-version=1
-LibDir=
