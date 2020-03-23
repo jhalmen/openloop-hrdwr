@@ -1,0 +1,5 @@
+# backup files
+*.sch-bak
+*.kicad_pcb-bak
+
+fp-info-cache
